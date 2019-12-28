@@ -24,9 +24,13 @@ class QuizPage extends StatefulWidget {
   _QuizPageState createState() => _QuizPageState();
 }
 
+
 class _QuizPageState extends State<QuizPage> {
+  List <Icon> myList = [];
   @override
   Widget build(BuildContext context) {
+
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -61,8 +65,8 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                //The user picked true.
-              },
+             //User picked true
+                },
             ),
           ),
         ),
@@ -84,7 +88,9 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        Row(
+          children: myList,
+        ),
       ],
     );
   }
