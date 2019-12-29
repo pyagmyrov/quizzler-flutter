@@ -28,5 +28,22 @@ class QuizBrain {
     bool quizQuestionAnswer(){
         return _questionBank[_questionNumber].questionAnswer;
     }
+
+    bool isFinished(){
+        if(_questionNumber < _questionBank.length-1){
+            print('Not finished yet');
+            return false;
+        }
+        else{
+            print('finished');
+            return true;
+        }
+    }
+
+    int reset(){
+        _questionNumber = 0;
+        return _questionNumber;
+    }
+
 }
 

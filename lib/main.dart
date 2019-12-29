@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'quiz_brain.dart';
+
 void main() => runApp(Quizzler());
 
 class Quizzler extends StatelessWidget {
@@ -34,26 +36,40 @@ void jogabym(bool userPickedAnswer){
   bool correctAnswer = quizBrain.quizQuestionAnswer();
 
   setState(() {
-
-  if(correctAnswer == userPickedAnswer){
-    myList.add(
-      Icon(
-        Icons.check,
-        color: Colors.green,
-      )
-    );
-  }
-  else {
-    myList.add(
-      Icon(
-        Icons.close,
-        color: Colors.red,
-      ),
-    );
-  }
-  quizBrain.nexQuestion();
+    if(quizBrain.isFinished()==true){
+      Alert(context: context, title: "Cancel-e bas", desc: "Test dyndy, sagja bol").show();
+      quizBrain.reset();
+      myList.clear();
+    }else {
+      if (correctAnswer==userPickedAnswer) {
+        myList
+                .add(
+                Icon(
+                  Icons
+                          .check,
+                  color: Colors
+                          .green,
+                )
+        );
+      }
+      else {
+        myList
+                .add(
+          Icon(
+            Icons
+                    .close,
+            color: Colors
+                    .red,
+          ),
+        );
+      }
+      quizBrain
+              .nexQuestion();
+    }
   });
 }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -135,3 +151,4 @@ void jogabym(bool userPickedAnswer){
       );
     }
 }
+

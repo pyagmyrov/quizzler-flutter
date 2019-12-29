@@ -110,6 +110,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "rflutter_alert",
+      "rootUri": "file:///Users/yagmyrov/Desktop/proje/flutter/.pub-cache/hosted/pub.dartlang.org/rflutter_alert-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/yagmyrov/Desktop/proje/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -176,7 +182,7 @@
       "languageVersion": "2.0"
     }
   ],
-  "generated": "2019-12-26T23:18:21.354014Z",
+  "generated": "2019-12-29T01:01:30.271645Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }
